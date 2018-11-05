@@ -38,11 +38,13 @@ x = np.arange(1,len(scores)+1,1);
 
 y = softmax(scores);
 
-y_mul = softmax(scores * 10)                          
+# quiz for understanding what happens if inputs change in magnitude                         
+y_mul = softmax(scores * 10)
 y_div = softmax(scores / 10)                     
 
+#plot the results
 plt.plot(x, y,'ro',label='Softmax of Normal Input')
-#plt.plot(x,y_mul,'bs',x,y_div,'g^')
+#plt.plot(x,y_mul,'bs',x,y_div,'g^') # quiz results
 plt.show()
 
 """
